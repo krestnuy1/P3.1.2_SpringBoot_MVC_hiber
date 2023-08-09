@@ -12,9 +12,13 @@ import java.util.List;
 @Repository
 public class UserDAOImpl implements UserDAO{
 
-    @Autowired
+
     private EntityManager entityManager;
 
+    @Autowired
+    public UserDAOImpl(EntityManager entityManager) {
+        this.entityManager = entityManager;
+    }
 
     public List<User> getAllUsers() {
         return entityManager.createQuery("SELECT u FROM User u", User.class)

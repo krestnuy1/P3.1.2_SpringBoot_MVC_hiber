@@ -1,10 +1,6 @@
 package com.example.p312springboot_mysql.entity;
 
 
-
-
-
-
 import jakarta.persistence.*;
 
 
